@@ -21,7 +21,7 @@ public class AppointmentBook {
         for(int i = startPeriod; i <= endPeriod; i++){
             int freeBlock = findFreeBlock(i, duration);
             if (freeBlock > -1){
-                reverseBlock(i, freeBlock, duration);
+                reverseBlock( freeBlock, duration, startPeriod);
                 return true;
             }
         }
